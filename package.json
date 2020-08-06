@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
   }
 }
