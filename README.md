@@ -18,25 +18,25 @@ npm install @ndct/rxjs-operators
 start<T>(callback: () => void): MonoTypeOperatorFunction<T>
 ```
 
-#### Parameters
++ Parameters
 
-| Name     | Description                  |
-| -------- | ---------------------- |
-| callback | 订阅开始时要调用的函数 |
+  | Name     | Description            |
+  | -------- | ---------------------- |
+  | callback | 订阅开始时要调用的函数 |
 
-#### Examples
++ Examples
 
-```typescript
-import { ajax } from 'rxjs/ajax'
-import { finalize } from "rxjs/operators"
-import { start } from "@ndct/rxjs-operators"
-
-ajax(`https://api.github.com/users?per_page=5`).pipe(
-  start(() => console.log('load start')),
-  finalize(() => console.log('load end'))
-).subscribe(
-  res => console.log(res),
-  error => console.log(error)
-)
-```
+  ```typescript
+  import { ajax } from 'rxjs/ajax'
+  import { finalize } from "rxjs/operators"
+  import { start } from "@ndct/rxjs-operators"
+  
+  ajax(`https://api.github.com/users?per_page=5`).pipe(
+    start(() => console.log('load start')),
+    finalize(() => console.log('load end'))
+  ).subscribe(
+    res => console.log(res),
+    error => console.log(error)
+  )
+  ```
 
