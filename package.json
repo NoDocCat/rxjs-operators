@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
-  "homepage": "https://github.com/NoDocCat/rxjs-operators#readme"
+  "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
 }
