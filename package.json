@@ -4,7 +4,8 @@
   "description": "Rxjs操作符扩展",
   "main": "index.js",
   "scripts": {
-    "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix"
+    "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,13 +34,16 @@
     }
   },
   "devDependencies": {
+    "@types/jest": "^26.0.9",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   }
 }
