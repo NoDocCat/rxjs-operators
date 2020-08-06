@@ -33,6 +33,9 @@
       "pre-push": "lint-staged"
     }
   },
+  "peerDependencies": {
+    "rxjs": "^6.6.2"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.9",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
@@ -43,6 +46,7 @@
     "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "rxjs": "^6.6.2",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   }
