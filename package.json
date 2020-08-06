@@ -4,7 +4,7 @@
   "description": "Rxjs操作符扩展",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,25 @@
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   }
