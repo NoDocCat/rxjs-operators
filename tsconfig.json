@@ -4,6 +4,7 @@
     "outDir": "./dist/esm",
     "target": "ESNext",
     "module": "ESNext",
+    "declaration": true,
     "importHelpers": true,
     "preserveConstEnums": true,
     "sourceMap": true,

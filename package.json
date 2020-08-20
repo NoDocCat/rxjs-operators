@@ -2,11 +2,13 @@
   "name": "@ndct/rxjs-operators",
   "version": "0.0.0",
   "description": "Rxjs操作符扩展",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "scripts": {
+    "build": "npm run clean && tsc -b ./tsconfig.json ./tsconfig.cjs.json",
+    "clean": "rimraf -r ./dist",
     "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix",
-    "test": "jest",
-    "build": "tsc -b ./tsconfig.json"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,7 @@
     "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "rxjs": "^6.6.2",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
