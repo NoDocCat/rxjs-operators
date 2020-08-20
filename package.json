@@ -1,6 +1,6 @@
 {
   "name": "@ndct/rxjs-operators",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Rxjs操作符扩展",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -24,6 +24,13 @@
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
+  "files": [
+    "./dist",
+    "./src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "lint-staged": {
     "*.ts": [
       "prettier --write",
