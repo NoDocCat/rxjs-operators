@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -b ./tsconfig.json"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist/esm",
+    "target": "ESNext",
+    "module": "ESNext",
+    "importHelpers": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "tests"
+  ]
+}
