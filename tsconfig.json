@@ -12,6 +12,7 @@
     "alwaysStrict": true,
     "noImplicitReturns": true,
     "moduleResolution": "Node",
+    "esModuleInterop": true,
     "lib": [
       "ESNext"
     ]
