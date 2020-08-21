@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { start } from "../../src";
+import { start, finalize } from "../../src";
 
 it("应当在订阅回调之前执行", () => {
   let flag = false;
@@ -8,6 +8,9 @@ it("应当在订阅回调之前执行", () => {
     .pipe(
       start(() => {
         expect(flag).toBe(false);
+      }),
+      finalize(() => {
+        expect(flag).toBe(true);
       })
     )
     .subscribe(() => {

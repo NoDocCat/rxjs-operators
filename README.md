@@ -28,8 +28,7 @@ start<T>(callback: () => void): MonoTypeOperatorFunction<T>
 
   ```typescript
   import { ajax } from 'rxjs/ajax'
-  import { finalize } from "rxjs/operators"
-  import { start } from "@ndct/rxjs-operators"
+  import { start, finalize } from "@ndct/rxjs-operators"
   
   ajax(`https://api.github.com/users?per_page=5`).pipe(
     start(() => console.log('load start')),
