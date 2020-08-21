@@ -5,7 +5,8 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "scripts": {
-    "build": "npm run clean && tsc -b ./tsconfig.json ./tsconfig.cjs.json",
+    "build": "npm run clean && npm run lint && npm run test && npm run compile",
+    "compile": "tsc -b ./tsconfig.json ./tsconfig.cjs.json",
     "clean": "rimraf -r ./dist",
     "lint": "prettier */**/*.ts --write && eslint */**/*.ts --fix",
     "test": "jest"
