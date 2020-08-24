@@ -42,4 +42,26 @@ describe("operators/start", () => {
         (error) => (result = error)
       );
   });
+
+  it("不订阅时不执行副作用", () => {
+    let flag = false;
+
+    of(1, 2, 3).pipe(start(() => (flag = true)));
+
+    expect(flag).not.toBeTruthy();
+  });
+
+  it("副作用只执行一次", () => {
+    let count = 0;
+
+    of(1, 2, 3)
+      .pipe(start(() => (count += 1)))
+      .subscribe(
+        () => null,
+        () => null,
+        () => {
+          expect(count).toBe(1);
+        }
+      );
+  });
 });
