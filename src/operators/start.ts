@@ -1,6 +1,9 @@
-import { MonoTypeOperatorFunction } from "rxjs";
+import { MonoTypeOperatorFunction, defer } from "rxjs";
 
 export function start<T>(callback: () => void): MonoTypeOperatorFunction<T> {
-  callback && callback();
-  return (source) => source;
+  return (source) =>
+    defer(() => {
+      callback && callback();
+      return source;
+    });
 }
