@@ -1,6 +1,6 @@
 # rxjs-operators
 
-Rxjs操作符扩展
+Rxjs 操作符扩展
 
 ## 安装
 
