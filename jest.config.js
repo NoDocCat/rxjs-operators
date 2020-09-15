@@ -4,13 +4,5 @@ module.exports = {
   testEnvironment: "node",
   testMatch: ["<rootDir>/tests/**/*.spec.ts"],
   collectCoverage: true,
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
-  coverageThreshold: {
-    global: {
-      branches: 100,
-      lines: 100,
-      functions: 100,
-      statements: 100,
-    },
-  },
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"]
 };
