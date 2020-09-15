@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/checkout@v2
+      - uses: egordm/gha-yarn-node-cache@v1
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn compile
+      - name: Upload Test Coverage
+        run: bash <(curl -s https://codecov.io/bash)
