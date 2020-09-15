@@ -12,14 +12,28 @@ jobs:
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     steps:
-      - uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup nodejs v14
+        uses: actions/setup-node@v1
         with:
           node-version: 14
-      - uses: actions/checkout@v2
-      - uses: egordm/gha-yarn-node-cache@v1
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test
-      - run: yarn compile
-      - name: Upload Test Coverage
+
+      - name: Cache depend
+        uses: egordm/gha-yarn-node-cache@v1
+
+      - name: Install depend
+        run: yarn install
+
+      - name: Lint code
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Test compile
+        run: yarn compile
+
+      - name: Upload test coverage
         run: bash <(curl -s https://codecov.io/bash)
