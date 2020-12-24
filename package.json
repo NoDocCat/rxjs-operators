@@ -5,10 +5,10 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "scripts": {
-    "build": "yarn run build:clean && yarn run build:compile",
+    "build": "yarn build:clean && yarn build:compile",
     "build:compile": "tsc -b ./tsconfig.json ./tsconfig.cjs.json",
     "build:clean": "shx rm -rf ./dist",
-    "lint": "yarn run lint:prettier && yarn run lint:eslint",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:prettier": "prettier --check {**/*,*}.{js,ts,json} --ignore-path ./.gitignore",
     "lint:eslint": "eslint {**/*,*}.{js,ts} --ignore-path ./.gitignore",
     "test": "jest"
@@ -42,7 +42,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn run lint"
+      "pre-push": "yarn lint"
     }
   },
   "peerDependencies": {

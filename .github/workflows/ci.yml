@@ -31,13 +31,13 @@ jobs:
         run: yarn install
 
       - name: Run code lint
-        run: yarn run lint
+        run: yarn lint
 
       - name: Run code test
-        run: yarn run test
+        run: yarn test
 
       - name: Run test compile
-        run: yarn run build:compile
+        run: yarn build:compile
 
       - name: Upload test coverage to codacy
         run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report
