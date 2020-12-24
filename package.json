@@ -30,6 +30,17 @@
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "lint-staged": {
     "*.{js,ts}": [
       "prettier --write",
