@@ -9,7 +9,7 @@
     "build:compile": "tsc -b ./tsconfig.json ./tsconfig.cjs.json",
     "build:clean": "shx rm -rf ./dist",
     "lint": "yarn lint:prettier && yarn lint:eslint",
-    "lint:prettier": "prettier --check {**/*,*}.{js,ts,json} --ignore-path ./.gitignore",
+    "lint:prettier": "prettier --check {**/*,*}.{js,ts,json,yml,md} --ignore-path ./.gitignore",
     "lint:eslint": "eslint {**/*,*}.{js,ts} --ignore-path ./.gitignore",
     "test": "jest"
   },
@@ -46,7 +46,7 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "*.json": [
+    "*.{json,yml,md}": [
       "prettier --write"
     ]
   },

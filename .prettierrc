@@ -1,4 +1,5 @@
 {
   "printWidth": 120,
-  "quoteProps": "consistent"
+  "quoteProps": "consistent",
+  "arrowParens": "avoid"
 }
