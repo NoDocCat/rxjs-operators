@@ -7,7 +7,7 @@ import { finalize } from "rxjs/operators";
  * @param callback 订阅开始时要调用的函数
  */
 export function start<T>(callback: () => unknown): MonoTypeOperatorFunction<T> {
-  return (source) =>
+  return source =>
     defer(() => {
       const cleanUpFn = callback && callback();
       return typeof cleanUpFn === "function" ? source.pipe(finalize(cleanUpFn as () => void)) : source;

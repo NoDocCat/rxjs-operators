@@ -7,14 +7,14 @@ describe("operators/start", () => {
   it("操作符应不影响流的内容", () => {
     const testScheduler = new TestScheduler((a, b) => expect(a).toEqual(b));
 
-    testScheduler.run((helpers) => {
+    testScheduler.run(helpers => {
       const { cold, expectObservable } = helpers;
       const source = cold("-a--b---c---|").pipe(start(() => null));
       expectObservable(source).toBe("-a--b---c---|");
     });
   });
 
-  it("副作用应在订阅时执行", (done) => {
+  it("副作用应在订阅时执行", done => {
     let loading = false;
 
     const source = of(1).pipe(start(() => (loading = true)));
@@ -31,7 +31,7 @@ describe("operators/start", () => {
     });
   });
 
-  it("副作用应只执行一次", (done) => {
+  it("副作用应只执行一次", done => {
     let count = 0;
 
     const source = of(1, 2, 3).pipe(start(() => (count += 1)));
@@ -48,7 +48,7 @@ describe("operators/start", () => {
     });
   });
 
-  it("应正确执行清理函数", (done) => {
+  it("应正确执行清理函数", done => {
     let loading = false;
     let running = false;
 
