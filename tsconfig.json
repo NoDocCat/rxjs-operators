@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "declaration": true,
+    "declarationDir": "./dist/types",
     "esModuleInterop": true,
     "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
     "noImplicitReturns": true,
-    "outDir": "./dist/esm",
+    "rootDir": "./src",
     "sourceMap": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "ES5"
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
