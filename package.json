@@ -7,9 +7,7 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c --failAfterWarnings",
-    "lint": "yarn lint:prettier && yarn lint:eslint",
-    "lint:prettier": "prettier --check {**/*,*}.{js,ts,json,yml,md} --ignore-path ./.gitignore",
-    "lint:eslint": "eslint {**/*,*}.{js,ts} --ignore-path ./.gitignore",
+    "lint": "prettier -c -u . && eslint {**/*,*}.{js,jsx,ts,tsx}",
     "test": "jest",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -44,13 +42,8 @@
     "README.md"
   ],
   "lint-staged": {
-    "*.{js,ts}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{json,yml,md}": [
-      "prettier --write"
-    ]
+    "**/*": "prettier -w -u",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "peerDependencies": {
     "rxjs": "^6.6.3"
