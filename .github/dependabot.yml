@@ -10,13 +10,3 @@ updates:
       - "NoDocCat"
     reviewers:
       - "NoDocCat"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    rebase-strategy: "disabled"
-    assignees:
-      - "NoDocCat"
-    reviewers:
-      - "NoDocCat"
