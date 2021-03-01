@@ -2,11 +2,9 @@ name: CI
 
 on:
   push:
-    branches:
-      - "master"
+    branches: ["master"]
   pull_request:
-    branches:
-      - "master"
+    branches: ["master"]
   workflow_dispatch:
 
 jobs:
@@ -24,20 +22,30 @@ jobs:
         with:
           node-version: 15
 
+      - name: Get yarn cache path
+        id: yarn-cache-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
       - name: Cache depend
-        uses: egordm/gha-yarn-node-cache@v1
+        id: yarn-cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Install depend
         run: yarn install
 
       - name: Run code lint
-        run: yarn lint
+        run: yarn run lint
 
       - name: Run code test
-        run: yarn test
+        run: yarn run test
 
       - name: Run test compile
-        run: yarn build
+        run: yarn run build
 
       - name: Upload test coverage to codacy
         run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report
