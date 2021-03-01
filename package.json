@@ -7,7 +7,7 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c --failAfterWarnings",
-    "lint": "prettier -c -u . && eslint '{**/*,*}.{js,jsx,ts,tsx}'",
+    "lint": "prettier -c -u . && eslint --ext '.js,.jsx,.ts,.tsx' .",
     "test": "jest",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
