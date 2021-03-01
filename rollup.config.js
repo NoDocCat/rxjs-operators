@@ -1,4 +1,4 @@
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 import cleaner from "rollup-plugin-cleaner";
 
@@ -9,5 +9,11 @@ export default {
     { dir: "./dist", entryFileNames: "index.cjs.js", format: "cjs", sourcemap: true },
   ],
   external: ["rxjs", "rxjs/operators"],
-  plugins: [typescript(), terser(), cleaner({ targets: ["./dist/"] })],
+  plugins: [
+    typescript({
+      useTsconfigDeclarationDir: true,
+    }),
+    terser(),
+    cleaner({ targets: ["./dist/"] }),
+  ],
 };
