@@ -6,7 +6,7 @@
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "build": "shx rm -r ./dist && rollup -c --failAfterWarnings",
+    "build": "shx rm -rf ./dist && rollup -c --failAfterWarnings",
     "lint": "prettier -c -u . && eslint --ext '.js,.jsx,.ts,.tsx' .",
     "test": "jest",
     "postinstall": "husky install",
