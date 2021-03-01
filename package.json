@@ -7,7 +7,7 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c --failAfterWarnings",
-    "lint": "prettier -c -u . && eslint {**/*,*}.{js,jsx,ts,tsx}",
+    "lint": "prettier -c -u . && eslint '{**/*,*}.{js,jsx,ts,tsx}'",
     "test": "jest",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -30,7 +30,6 @@
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
-  "private": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
