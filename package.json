@@ -42,7 +42,10 @@
   ],
   "lint-staged": {
     "**/*": "prettier -w -u",
-    "*.{js,jsx,ts,tsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier -w -u",
+      "eslint --fix"
+    ]
   },
   "peerDependencies": {
     "rxjs": "^6.6.3"
