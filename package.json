@@ -21,21 +21,14 @@
     "rxjs",
     "rxjs-operators"
   ],
-  "author": {
-    "name": "NoDocCat",
-    "email": "nodoccat@outlook.com"
-  },
+  "author": "NoDocCat <nodoccat@outlook.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/NoDocCat/rxjs-operators/issues"
   },
   "homepage": "https://github.com/NoDocCat/rxjs-operators#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "files": [
     "dist",
-    "src",
     "LICENSE",
     "package.json",
     "README.md"
