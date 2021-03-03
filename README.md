@@ -22,7 +22,7 @@ npm install @ndct/rxjs-operators
 > callback 可以返回一个函数用于清理副作用, 清理函数将在 finalize 时执行
 
 ```typescript
-start<T>(callback: () => unknown): MonoTypeOperatorFunction<T>
+start<T>(callback: () => any): MonoTypeOperatorFunction<T>
 ```
 
 - 参数
