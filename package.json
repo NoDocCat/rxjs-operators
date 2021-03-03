@@ -3,7 +3,7 @@
   "version": "1.3.0",
   "description": "Rxjs 操作符扩展",
   "main": "./dist/index.cjs.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "shx rm -rf ./dist && rollup -c --failAfterWarnings",
