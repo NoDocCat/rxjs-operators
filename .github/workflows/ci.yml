@@ -26,5 +26,6 @@ jobs:
       - run: npm run lint
       - run: npm run test
 
-      - run: bash <(curl -Ls https://uploader.codecov.io/latest/linux/codecov)> -t ${{ secrets.CODECOV_TOKEN }}
-        if: ${{ secrets.CODECOV_TOKEN }}
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
