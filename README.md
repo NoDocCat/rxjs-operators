@@ -4,6 +4,7 @@ Rxjs 操作符扩展
 
 ![npm](https://img.shields.io/npm/v/@ndct/rxjs-operators?logo=npm&style=for-the-badge)
 ![CI](https://img.shields.io/github/workflow/status/nodoccat/rxjs-operators/CI?label=CI&logo=github&style=for-the-badge)
+![COVERAGE](https://img.shields.io/codecov/c/github/nodoccat/rxjs-operators?logo=codecov&style=for-the-badge)
 
 ## 安装
 
